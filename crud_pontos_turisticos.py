@@ -25,7 +25,7 @@ class PontosTuristicos:
             if not os.path.exists(self.diretorio):
                 os.makedirs(self.diretorio)
 
-            self._pontos_turisticos.to_csv(self.arquivo_csv, sep=',', index=False, encoding='utf-8')
+            self.salavar_arquivo_em_csv()
             print(f"Arquivo CSV criado com sucesso em {self.arquivo_csv}!")
             
         except Exception as exc:
@@ -35,6 +35,10 @@ class PontosTuristicos:
         finally:
 
             print("Não foi necessário criar um novo arquivo csv")
+
+    def salavar_arquivo_em_csv(self):
+
+        self._pontos_turisticos.to_csv(self.arquivo_csv, sep=',', index=False, encoding='utf-8')
 
     def cadastrar_ponto_turistico(self, nome, endereco, descricao, horario_de_funcionamento, media_de_avaliacoes):
 
@@ -48,8 +52,7 @@ class PontosTuristicos:
         })
 
         self._pontos_turisticos = pd.concat([self._pontos_turisticos, novo_ponto_turistico], ignore_index=True)
-
-        self._pontos_turisticos.to_csv(self.arquivo_csv, sep=',', index=False, encoding='utf-8')
+        self.salavar_arquivo_em_csv()
         print("Ponto cadastrado com sucesso!")
 
     def listar_pontos_turisticos_cadastrados(self):
@@ -62,9 +65,7 @@ class PontosTuristicos:
             print("ID do ponto turístico não encontrado.")
 
         self._pontos_turisticos.loc[self._pontos_turisticos["ID"] == id_ponto_turistico, campo_de_alteracao] = nova_informacao
-        
-        self._pontos_turisticos.to_csv(self.arquivo_csv, sep=',', index=False, encoding='utf-8')
-
+        self.salavar_arquivo_em_csv()
         print(f"A informacao {campo_de_alteracao} do ponto turístico de id {id} foi alterada com sucesso!")
 
     def deletar_ponto_turistico(self, id_ponto_turistico):
@@ -73,4 +74,5 @@ class PontosTuristicos:
             print("ID do ponto turístico não encontrado.")
 
         self._pontos_turisticos= self._pontos_turisticos[self._pontos_turisticos["ID"] != id_ponto_turistico]
-        self._pontos_turisticos.to_csv(self.arquivo_csv, sep=',', index=False, encoding='utf-8')
+        self.salavar_arquivo_em_csv()
+    
