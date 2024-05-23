@@ -11,22 +11,59 @@ crud_usuarios = crud_usuarios.Usuarios()
 crud_estabelecimentos_comerciais = crud_estabelecimentos_comerciais.EstabelicimentoComerciais()
 
 #Menu Principal
-print("----------------------------------\nSEJA BEM VINDO AO NOSSO SITEMA!\n----------------------------------\n"
-        "Escolha uma opção para ter acesso\nao nosso conteúdo. DIVIRTA-SE!\n----------------------------------")
-print("1 - Acessar Pontos Turísticos\n2 - Acessar Usuários\n3 - Acessar Estabelecimentos" 
-        "\n    Comerciais\n4 - Sair\n----------------------------------")
-opcao = input("Conteúdo de número ")
-print("----------------------------------")
-while opcao != "4":
-    if opcao == "1":
-        ...
-    elif opcao == "2":
-        ...
-    elif opcao == "3":
-        ...
-    elif opcao == "4":
-        os.system("cls")
-        print("Ahh poxa... Espero que possa voltar e conhecer nosso sistema. Obrigado!")
+while True:
+    print("""
+        ----------------------------------
+        SEJA BEM VINDO AO NOSSO SITEMA!
+        ----------------------------------
+        Escolha uma opção para ter acesso
+        ao nosso conteúdo. DIVIRTA-SE!
+        ----------------------------------
+        1 - Acessar Pontos Turísticos
+        2 - Acessar Usuários
+        3 - Acessar Estabelecimentos
+            Comerciais
+        4 - Sair 
+        ----------------------------------
+        """
+        )
+    menuPrincipal = input("Conteúdo de número ")
+
+    while menuPrincipal != "4":
+        if menuPrincipal == "1":
+            os.system("cls")
+            print(
+                """
+                ------------------------------
+                CRUD PONTOS TURÍSTICOS
+                ------------------------------
+                1 - Cadastrar ponto turístico
+                2 - Editar ponto turístico
+                3 - Deletar ponto turístico
+                4 - Listar ponto(s) turístico(s)
+                5 - Sair
+                ------------------------------
+                """
+            )
+            menuCrud1 = input("Escolha uma opção: ")
+            if menuCrud1 != "5":
+                ...
+            if menuCrud1 == "1":
+                ...
+        elif menuPrincipal == "2":
+            ...
+        elif menuPrincipal == "3":
+            ...
+        else:
+            print("Digite um número válido entre as opções.")
+    os.system("cls")
+    if menuPrincipal == "4":
+        break
+print("""
+    -----------------------------------------------------------------------
+    Ahh poxa... Espero que possa voltar e conhecer nosso sistema. Obrigado!
+    -----------------------------------------------------------------------
+    """)
 
 #1º CRUD -> Pontos Turísticos
 #crud_pontos_turisticos.criar_arquivo_csv()
