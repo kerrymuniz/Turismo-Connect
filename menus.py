@@ -58,6 +58,7 @@ while True:
                 crud_pontos_turisticos.cadastrar_ponto_turistico(nome="Gilvando", endereco="rua do gil", descricao="Lugar Aberto",horario_de_funcionamento= "Seg - Sex: 6:00 - 22:00", media_de_avaliacoes= "4.9" )
                 continuar = input("Deseja continuar manipulando ( (S)im / (N)ão )? ")
                 if continuar == "N":
+                    ...
                     
 
             if menuCrud1 == "2":
