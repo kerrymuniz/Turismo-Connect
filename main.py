@@ -20,7 +20,7 @@ crud_estabelecimentos_comerciais = crud_estabelecimentos_comerciais.Estabelicime
 #crud_pontos_turisticos.deletar_ponto_turistico(id_ponto_turistico= 13)
 #crud_pontos_turisticos.listar_pontos_turisticos_cadastrados()
 
-#2º CRUD -> Usuários cadastrados
+#2º CRUD -> Usuários
 # crud_usuarios.criar_arquivo_csv()
 # crud_usuarios.cadatrar_usuario(nome="Gilvando", cpf= 39821938, idade= 12, email= "ggg@cesar.school", telefone= 321312, endereco="iwjiawhdihawd")
 # crud_usuarios.editar_informacao_usuario(id_usuario= 1, campo_de_alteracao= "Nome", nova_informacao= "João")

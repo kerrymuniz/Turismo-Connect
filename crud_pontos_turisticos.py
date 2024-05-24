@@ -72,7 +72,8 @@ class PontosTuristicos:
 
         if id_ponto_turistico not in self._pontos_turisticos['ID'].values:
             print("ID do ponto turístico não encontrado.")
-
-        self._pontos_turisticos= self._pontos_turisticos[self._pontos_turisticos["ID"] != id_ponto_turistico]
-        self.salvar_arquivo_em_csv()
+        else:
+            self._pontos_turisticos= self._pontos_turisticos[self._pontos_turisticos["ID"] != id_ponto_turistico]
+            self.salvar_arquivo_em_csv()
+            print(f"Ponto turístico {id_ponto_turistico} deletado com sucesso!")
     

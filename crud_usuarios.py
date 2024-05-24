@@ -73,6 +73,7 @@ class Usuarios:
 
         if id_usuario not in self._usuarios["ID"].values:
             print("ID do usuario não encontrado")
-
-        self._usuarios = self._usuarios[self._usuarios["ID"] != id_usuario]
-        self.salvar_arquivo_em_csv()
+        else:
+            self._usuarios = self._usuarios[self._usuarios["ID"] != id_usuario]
+            self.salvar_arquivo_em_csv()
+            print(f"Usuário {id_usuario} deletado com sucesso!")
