@@ -57,7 +57,11 @@ class EstabelicimentoComerciais:
 
     def listar_estabelicimento_comerciais_cadastrados(self):
 
-        return print(self._estabelecimentos_comerciais.to_string(index= False))
+        if self._estabelecimentos_comerciais.empty:
+            print("Nenhum estabelecimento comercial registrado! ")
+        else:
+            pd.set_option('colheader_justify', 'center')
+            print(self._estabelecimentos_comerciais.to_string(index= False))
     
     def editar_informacao_estabelicimento_comercial(self, id_estabelecimento_comercial, campo_de_alteracao, nova_informacao):
 

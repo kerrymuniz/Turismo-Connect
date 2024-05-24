@@ -58,7 +58,11 @@ class Usuarios:
 
     def listar_usuarios_cadastrados(self):
 
-        return print(self._usuarios.to_string(index= False))
+        if self._usuarios.empty:
+            print("Nenhum usuário registrado! ")
+        else:
+            pd.set_option('colheader_justify', 'center')
+            print(self._usuarios.to_string(index= False))
     
     def editar_informacao_usuario(self, id_usuario, campo_de_alteracao, nova_informacao):
 

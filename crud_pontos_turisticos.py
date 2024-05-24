@@ -57,7 +57,11 @@ class PontosTuristicos:
 
     def listar_pontos_turisticos_cadastrados(self):
 
-        return print(self._pontos_turisticos.to_string(index= False)) 
+        if self._pontos_turisticos.empty:
+            print("Nenhum ponto turístico registrado! ")
+        else:
+            pd.set_option('colheader_justify', 'center')
+            print(self._pontos_turisticos.to_string(index= False)) 
 
     def editar_informacao_ponto_turistico(self, id_ponto_turistico, campo_de_alteracao, nova_informacao):
 
