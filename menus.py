@@ -87,7 +87,7 @@ while True:
             if menuCrud1 == "1":
                 #CADASTRAR
                 crud_pontos_turisticos.criar_arquivo_csv()
-                crud_pontos_turisticos.cadastrar_ponto_turistico(nome="Pedro", endereco="rua do pedro", descricao="Lugar Aberto",horario_de_funcionamento= "Seg - Sex: 6:00 - 22:00", media_de_avaliacoes= "4.9" )
+                crud_pontos_turisticos.cadastrar_ponto_turistico(nome="Joao", endereco="rua do joao", descricao="Lugar Aberto",horario_de_funcionamento= "Seg - Sex: 6:00 - 22:00", media_de_avaliacoes= "4.9" )
                 continuar = input("Deseja continuar manipulando ( (S)im / (N)ão )? ")
                 if continuar == "N":
                     ...
@@ -95,7 +95,7 @@ while True:
             if menuCrud1 == "2":
                 #EDITAR
                 crud_pontos_turisticos.criar_arquivo_csv()
-                crud_pontos_turisticos.editar_informacao_ponto_turistico(id_ponto_turistico= 1, campo_de_alteracao=["Nome", "Endereço"], nova_informacao=["Católica", "Rua do Prícipe"])
+                crud_pontos_turisticos.editar_informacao_ponto_turistico(id_ponto_turistico= 1, campo_de_alteracao=["Nome", "Endereço"], nova_informacao=["Clube", "Rua do clube"])
                 continuar = input("Deseja continuar manipulando ( (S)im / (N)ão )? ")
                 if continuar == "N":
                     ...
@@ -103,7 +103,7 @@ while True:
             if menuCrud1 == "3":
                 #DELETAR
                 crud_pontos_turisticos.criar_arquivo_csv()
-                crud_pontos_turisticos.deletar_ponto_turistico(id_ponto_turistico= 2)
+                crud_pontos_turisticos.deletar_ponto_turistico(id_ponto_turistico= 1)
                 continuar = input("Deseja continuar manipulando ( (S)im / (N)ão )? ")
                 if continuar == "N":
                     ...
